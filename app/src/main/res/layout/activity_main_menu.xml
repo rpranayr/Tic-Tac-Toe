@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main_menu"
+    android:orientation="vertical"
+    android:background="#333333">
+
+    <TextView
+        android:id="@+id/tv_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/app_name"
+        android:textColor="#ffffff"
+        android:textSize="70sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.439"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.123" />
+
+    <Button
+        android:id="@+id/btn_singlePlayer"
+        android:layout_width="@dimen/width_menu_btn"
+        android:layout_height="@dimen/height_menu_btn"
+        android:background="#ffdc73"
+        android:text="1v1s"
+        android:textSize="@dimen/btn_text_size"
+        android:textAllCaps="false"
+        android:textAlignment="center"
+        android:onClick="go_to_singlePlayer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.385"
+        />
+
+    <Button
+        android:id="@+id/btn_chatroom"
+        android:layout_width="@dimen/width_menu_btn"
+        android:layout_height="@dimen/height_menu_btn"
+        android:background="#97ebdb"
+        android:text="Multiplayer"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="@dimen/btn_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_singlePlayer"
+        app:layout_constraintVertical_bias="0.108"
+        />
+
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="@dimen/width_menu_btn"
+        android:layout_height="@dimen/height_menu_btn"
+        android:background="#ff0065"
+        android:onClick="go_to_search"
+        android:text="WebSearch"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="@dimen/btn_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.644"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

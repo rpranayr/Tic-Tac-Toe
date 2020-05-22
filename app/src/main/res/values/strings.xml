@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Tic Tac Toe</string>
+    <string name="search_btn">Web Search</string>
+    <string name="header">Tic-Tac-Toe</string>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="width_menu_btn">300dp</dimen>
+    <dimen name="height_menu_btn">50dp</dimen>
+    <dimen name="btn_text_size">17sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+</resources>
