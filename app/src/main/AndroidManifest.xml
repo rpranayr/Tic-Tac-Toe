@@ -13,25 +13,31 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity android:name=".online_game"></activity>
+        <activity
+            android:name=".network_hub"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".single_player"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"
-            android:theme="@style/FullScreenTheme"></activity>
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".web_search"
             android:screenOrientation="portrait"
-            android:theme="@style/FullScreenTheme"
+            android:theme="@style/AppTheme.NoActionBar"
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".main_menu"
             android:screenOrientation="portrait"
-            android:theme="@style/FullScreenTheme"
+            android:theme="@style/AppTheme.NoActionBar"
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/FullScreenTheme"
+            android:theme="@style/AppTheme.NoActionBar"
             tools:ignore="LockedOrientationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -28,4 +28,10 @@ public class main_menu extends AppCompatActivity {
         startActivity(menu_intent);
         finish();
     }
+
+    public void go_to_multiPlayer(View view) {
+        menu_intent = new Intent(main_menu.this, network_hub.class);
+        startActivity(menu_intent);
+        finish();
+    }
 }

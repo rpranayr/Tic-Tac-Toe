@@ -15,7 +15,7 @@
         android:fontFamily="sans-serif-medium"
         android:text="@string/app_name"
         android:textColor="#ffffff"
-        android:textSize="70sp"
+        android:textSize="65sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.439"
@@ -46,17 +46,16 @@
         android:layout_width="@dimen/width_menu_btn"
         android:layout_height="@dimen/height_menu_btn"
         android:background="#97ebdb"
+        android:onClick="go_to_multiPlayer"
         android:text="Multiplayer"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textSize="@dimen/btn_text_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_singlePlayer"
-        app:layout_constraintVertical_bias="0.108"
-        />
+        app:layout_constraintVertical_bias="0.057" />
 
     <Button
         android:id="@+id/btn_search"
@@ -70,10 +69,8 @@
         android:textSize="@dimen/btn_text_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.644"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/btn_chatroom"
+        app:layout_constraintVertical_bias="0.081" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

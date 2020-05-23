@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".network_hub"
+    android:orientation="vertical"
+    android:background="#D3D3D3">
+
+    <TextView
+        android:id="@+id/tv_playerName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Network Hub"
+        android:textSize="60sp"
+        android:layout_marginBottom="40px"
+        android:textAlignment="center"
+
+        android:fontFamily="sans-serif-condensed-medium"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingTop="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+
+            <TextView
+                android:id="@+id/tv_sendInvite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Send Invite To"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif-condensed-medium"
+                />
+
+            <ListView
+                android:id="@+id/lv_sendInvite"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_acceptInvite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Accept Invite From"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif-condensed-medium"
+                />
+            
+            <ListView
+                android:id="@+id/lv_acceptInvite"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
