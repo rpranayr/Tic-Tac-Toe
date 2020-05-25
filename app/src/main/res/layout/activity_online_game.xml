@@ -4,6 +4,137 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".online_game">
+    tools:context=".online_game"
+    android:background="#333333"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
+    >
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="@drawable/board_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.441"
+        app:layout_editor_absoluteX="8dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="3">
+
+            <ImageView
+                android:id="@+id/iv_00"
+                android:layout_width="@dimen/XandOdimens"
+                android:layout_height="@dimen/XandOdimens"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:onClick="GameBoardClick" />
+
+            <ImageView
+                android:id="@+id/iv_01"
+                android:layout_width="@dimen/XandOdimens"
+                android:layout_height="@dimen/XandOdimens"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:onClick="GameBoardClick" />
+
+            <ImageView
+                android:id="@+id/iv_02"
+                android:layout_width="@dimen/XandOdimens"
+                android:layout_height="@dimen/XandOdimens"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:onClick="GameBoardClick" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="3">
+
+            <ImageView
+                android:id="@+id/iv_10"
+                android:layout_width="@dimen/XandOdimens"
+                android:layout_height="@dimen/XandOdimens"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:onClick="GameBoardClick" />
+
+            <ImageView
+                android:id="@+id/iv_11"
+                android:layout_width="@dimen/XandOdimens"
+                android:layout_height="@dimen/XandOdimens"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:onClick="GameBoardClick" />
+
+            <ImageView
+                android:id="@+id/iv_12"
+                android:layout_width="@dimen/XandOdimens"
+                android:layout_height="@dimen/XandOdimens"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:onClick="GameBoardClick" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="3">
+
+            <ImageView
+                android:id="@+id/iv_20"
+                android:layout_width="@dimen/XandOdimens"
+                android:layout_height="@dimen/XandOdimens"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:onClick="GameBoardClick" />
+
+            <ImageView
+                android:id="@+id/iv_21"
+                android:layout_width="@dimen/XandOdimens"
+                android:layout_height="@dimen/XandOdimens"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:onClick="GameBoardClick" />
+
+            <ImageView
+                android:id="@+id/iv_22"
+                android:layout_width="@dimen/XandOdimens"
+                android:layout_height="@dimen/XandOdimens"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:onClick="GameBoardClick" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/tv_playerTurn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player Turn"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        android:textColor="#ffffff"
+        android:fontFamily="sans-serif-condensed-medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.027" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,7 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".online_game"></activity>
+        <activity android:name=".online_game"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="LockedOrientationActivity"></activity>
         <activity
             android:name=".network_hub"
             android:screenOrientation="portrait"

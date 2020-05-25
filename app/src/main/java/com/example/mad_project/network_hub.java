@@ -31,6 +31,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import org.w3c.dom.Text;
 
+import java.lang.reflect.AccessibleObject;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -98,8 +99,6 @@ public class network_hub extends AppCompatActivity {
                     myRef.child("users").child(userName).child("request").setValue(userId);
                     adpt2.clear();
                     AcceptIncomingRequests();
-
-
                 }else {
                     //User isn't signed in
                     CompleteRegistration();
@@ -107,7 +106,6 @@ public class network_hub extends AppCompatActivity {
                 }
             }
         };
-
 
         myRef.getRoot().child("users").addValueEventListener(new ValueEventListener() {
             @Override
@@ -150,9 +148,13 @@ public class network_hub extends AppCompatActivity {
         b.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                myRef.child("users").child(player).push().setValue(userId);
+
+                myRef.child("users")
+                        .child(player).child("request").push().setValue(userEmail);
+
                 if(typeOfRequest.equalsIgnoreCase("From")) {
                     startGame(player + ":"+ userName, player, "From");
+
                 }else {
                     startGame(userName + ":" + player, player, "To");
                 }
@@ -206,10 +208,12 @@ public class network_hub extends AppCompatActivity {
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         try {
                             HashMap<String, Object> map = (HashMap<String, Object>) dataSnapshot.getValue();
+                            Toast.makeText(network_hub.this, "inside acceptincomingrequests",Toast.LENGTH_LONG).show();
                             if(map!=null) {
                                 String value = "";
                                 for( String key: map.keySet()) {
                                     value = (String) map.get(key);
+
                                     adpt2.add(convertEmailToString(value));
                                     adpt2.notifyDataSetChanged();
                                     myRef.child("users").child(userName).child("request").setValue(userId);
