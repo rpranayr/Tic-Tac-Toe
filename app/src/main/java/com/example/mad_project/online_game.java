@@ -66,6 +66,7 @@ public class online_game extends AppCompatActivity {
         }else {
             myToken = "X";
             tv_playerTurn.setText(enemy_name + "'s Turn");
+
             myRef.child("playing").child(player_session).child("turn").setValue(enemy_name);
         }
 
@@ -75,8 +76,8 @@ public class online_game extends AppCompatActivity {
                 try {
                     String value = (String) dataSnapshot.getValue();
                     if(value.equals(user_name)) {
-                        tv_playerTurn.setText(enemy_name+"'s Turn");
-                        setEnableClick(false);
+                        tv_playerTurn.setText("Your Turn");
+                        setEnableClick(true);
                         activePlayer = 1;
 
                     }else if(value.equals(enemy_name)) {
@@ -102,7 +103,7 @@ public class online_game extends AppCompatActivity {
                         try {
                             Player1.clear();
                             Player2.clear();
-
+                            activePlayer = 2;
                             HashMap<String, Object> map = (HashMap<String, Object>) dataSnapshot.getValue();
                             if(map!=null) {
                                 String value = "";
@@ -254,6 +255,12 @@ public class online_game extends AppCompatActivity {
         AlertDialog.Builder b = new AlertDialog.Builder(this, R.style.TransparentDialog);
         b.setTitle(Title)
                 .setMessage("Start a new game?")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        ResetGame();
+                    }
+                })
                 .setNegativeButton("Menu", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {

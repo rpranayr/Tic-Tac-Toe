@@ -208,7 +208,6 @@ public class network_hub extends AppCompatActivity {
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         try {
                             HashMap<String, Object> map = (HashMap<String, Object>) dataSnapshot.getValue();
-                            Toast.makeText(network_hub.this, "inside acceptincomingrequests",Toast.LENGTH_LONG).show();
                             if(map!=null) {
                                 String value = "";
                                 for( String key: map.keySet()) {
